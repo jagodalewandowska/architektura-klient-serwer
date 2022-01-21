@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+
+.App {
+  text-align: center;
+}
+
+h1, nav, b, h4 {
+  font-family: 'Bevan';
+}
+
+h3{
+  margin-top: 2%;
+  font-family: 'Bevan';
+}
+
+h2 {
+  font-family: 'Bevan';
+  color: white;
+  margin-left: 150%;
+}
+
