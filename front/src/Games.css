@@ -1,7 +1,16 @@
-div ul {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    text-align: left;
-    
+.card {
+    --width: 250px;
+    margin: 5px;
+    max-width: var(--width);
+    min-width: var(--width);
+    padding-bottom: 20px;
+}
+
+
+
+.card-footer{
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
