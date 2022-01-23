@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app: module-gry
+    service: module-gry
+  name: gamebase
+spec:
+  host: ""
+  port:
+    targetPort: http
+  to:
+    kind: ""
+    name: module-gry
+    weight: null
+status:
