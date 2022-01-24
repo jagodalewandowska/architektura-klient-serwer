@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app: module-info
+    service: module-info
+  name: route-info
+spec:
+  host: ""
+  port:
+    targetPort: http
+  to:
+    kind: ""
+    name: module-info
+    weight: null
+status:

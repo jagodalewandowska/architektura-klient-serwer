@@ -20,17 +20,11 @@ spec:
       serviceAccountName: default
       containers:
       - name: module-gry
-        image: default-route-openshift-image-registry.apps.ocp.lab.cloudpak.site/labproj08/module-gry:latest
+        image: image-registry.openshift-image-registry.svc:5000/labproj08/module-gry:0.0.3
         imagePullPolicy: Always
         env:
-          - name: DB_TYPE
-            value: "mysql"
-          - name: MYSQL_DB_HOST
-            value: mysql
-          - name: MYSQL_DB_PORT
-            value: "8082"
-          - name: MYSQL_DB_USER
-            value: root
+          - name: REACT_APP_GAMES_INFO_URL
+            value: route-info-labproj08.apps.ocp.lab.cloudpak.site
           - name: MYSQL_ROOT_PASSWORD
             valueFrom:
               secretKeyRef:
@@ -38,5 +32,8 @@ spec:
                 key: rootpasswd
         ports:
         - containerPort: 8081
-        securityContext:
-          runAsUser: 1000
+        resources: {}
+        envFrom:
+        - configMapRef:
+            name: cmap-gry
+status: {}
