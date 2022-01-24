@@ -13,7 +13,7 @@ export default class App extends React.Component {
   }  
 
   componentDidMount() {
-    axios.get( process.env.REACT_APP_GAMES_INFO_URL + `/games` )
+    axios.get( `http://route-info-labproj08.apps.ocp.lab.cloudpak.site/games` )
       .then( result => {
         const gamesList = result.data
         this.setState({ gamesList })
