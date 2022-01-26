@@ -23,8 +23,6 @@ spec:
         image: image-registry.openshift-image-registry.svc:5000/labproj08/module-gry:0.0.3
         imagePullPolicy: Always
         env:
-          - name: REACT_APP_GAMES_INFO_URL
-            value: route-info-labproj08.apps.ocp.lab.cloudpak.site
           - name: MYSQL_ROOT_PASSWORD
             valueFrom:
               secretKeyRef:
